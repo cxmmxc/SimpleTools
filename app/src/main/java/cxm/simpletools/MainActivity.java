@@ -1,39 +1,63 @@
 package cxm.simpletools;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.Message;
 
-public class MainActivity extends AppCompatActivity {
+import com.lidroid.xutils.util.LogUtils;
 
+import cxm.simpletools.view.CircleView;
+
+public class MainActivity extends Activity {
+
+    private CircleView cusView;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.v("cxm","gitTest");
+        LogUtils.customTagPrefix = "cxm";
+//        initData();
+
+        cusView = (CircleView) findViewById(R.id.cusView);
+//        handler.sendEmptyMessageDelayed(1, 1000);
+        new Thread(cusView).start();
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    
+    int i = 0 ;
+    
+    android.os.Handler handler = new android.os.Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            i++;
+            cusView.setCurrentProgress(i);
+            handler.sendEmptyMessageDelayed(1, 50);
         }
+    };
 
-        return super.onOptionsItemSelected(item);
-    }
+    /*private void initData() {
+        HttpUtils httpUtils = new HttpUtils();
+        RequestParams params = new RequestParams();
+        params.addHeader("apikey", "6d50cddfbe6c33056d943737f2e134fc");
+        String address = "";
+        try {
+            address = URLEncoder.encode("朝阳", "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        params.addBodyParameter("cityname", address);
+        httpUtils.send(HttpRequest.HttpMethod.POST, "http://apis.baidu.com/apistore/weatherservice/citylist", params, new RequestCallBack<String>() {
+            @Override
+            public void onSuccess(ResponseInfo<String> responseInfo) {
+//                textview.setText("suc-"+responseInfo.result+" --- "+responseInfo.statusCode);
+                LogUtils.v(responseInfo.result);
+            }
+
+            @Override
+            public void onFailure(HttpException e, String s) {
+//                textview.setText("fail"+s);
+            }
+        });
+    }*/
+
 }
