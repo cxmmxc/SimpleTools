@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 
         cusView = (CircleView) findViewById(R.id.cusView);
 //        handler.sendEmptyMessageDelayed(1, 1000);
-        new Thread(cusView).start();
+//        new Thread(cusView).start();
     }
     
     int i = 0 ;
