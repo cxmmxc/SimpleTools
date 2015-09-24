@@ -1,7 +1,9 @@
-package cxm.simpletools;
+package cxm.simpletools.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import cxm.simpletools.R;
 
 /**
  * Created by lmz_cxm on 2015/9/22.

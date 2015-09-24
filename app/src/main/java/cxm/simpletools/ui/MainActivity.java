@@ -1,4 +1,4 @@
-package cxm.simpletools;
+package cxm.simpletools.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.os.Message;
 
 import com.lidroid.xutils.util.LogUtils;
 
+import cxm.simpletools.R;
 import cxm.simpletools.view.CircleView;
 
 public class MainActivity extends Activity {

@@ -145,7 +145,7 @@ public class CircleView extends View implements Runnable {
                 float abs_x = Math.abs(x - preX);
                 float abs_y = Math.abs(y - preY);
                 if(abs_x >= MIN_MOVE_DIS || abs_y >= MIN_MOVE_DIS) {
-                    mEraserPath.quadTo(preX, preY, x, y);
+                    mEraserPath.quadTo(preX, preY, x, y); 
                     preX = x;
                     preY = y;
                 }

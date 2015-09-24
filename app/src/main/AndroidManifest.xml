@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".TextCusActivity"
+            android:name=".IndexActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name=".ui.HearActivity"/>
+        <activity android:name=".ui.MainActivity"/>
+        <activity android:name=".ui.TextCusActivity"/>
+        <activity android:name=".ui.ShaderActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->
