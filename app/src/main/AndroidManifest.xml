@@ -22,6 +22,8 @@
         <activity android:name=".ui.MainActivity"/>
         <activity android:name=".ui.TextCusActivity"/>
         <activity android:name=".ui.ShaderActivity"/>
+        <activity android:name=".ui.GirEffectActivity"/>
+        <activity android:name=".ui.DreamActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->

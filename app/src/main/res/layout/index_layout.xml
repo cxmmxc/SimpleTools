@@ -31,4 +31,16 @@
         android:text="ShaderView"
         android:onClick="ShaderClick"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="GirlView"
+        android:onClick="GirlClick"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="DreamView"
+        android:onClick="DreamClick"
+        />
 </LinearLayout>

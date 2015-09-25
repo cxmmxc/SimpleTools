@@ -3,18 +3,18 @@ package cxm.simpletools.ui;
 import android.app.Activity;
 import android.os.Bundle;
 
-import cxm.simpletools.view.ShaderView;
+import cxm.simpletools.view.GirlEffectView;
 
 /**
- * Created by Terry.Chen on 2015/9/24 16:35.
+ * Created by Terry.Chen on 2015/9/25 15:05.
  * Description:
  * Email:cxm_lmz@163.com
  */
-public class ShaderActivity extends Activity {
+public class GirEffectActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(new ShaderView(this));
-        setContentView(new ShaderView(this));
+        setContentView(new GirlEffectView(this));
     }
 }

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import cxm.simpletools.ui.DreamActivity;
+import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
 import cxm.simpletools.ui.MainActivity;
 import cxm.simpletools.ui.ShaderActivity;
@@ -47,6 +49,16 @@ public class IndexActivity extends Activity {
 
     public void ShaderClick(View view) {
         intent.setClass(this, ShaderActivity.class);
+        startActivity(intent);
+    }
+
+    public void GirlClick(View view) {
+        intent.setClass(this, GirEffectActivity.class);
+        startActivity(intent);
+    }
+
+    public void DreamClick(View view) {
+        intent.setClass(this, DreamActivity.class);
         startActivity(intent);
     }
 }

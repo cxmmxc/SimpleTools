@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.BitmapShader;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.RadialGradient;
 import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
@@ -55,8 +56,11 @@ public class ShaderView extends View {
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.lakesi_1);
         
-        mPaint.setShader(new BitmapShader(bitmap, Shader.TileMode.MIRROR, Shader.TileMode.CLAMP));
+//        mPaint.setShader(new BitmapShader(bitmap, Shader.TileMode.MIRROR, Shader.TileMode.CLAMP));
+//        mPaint.setShader(new SweepGradient(scW/2, scH/2, Color.RED, Color.YELLOW));
+        mPaint.setShader(new RadialGradient(scW/2, scH/2, RECT_SIZE, Color.RED, Color.YELLOW, Shader.TileMode.CLAMP));
     }
+    
 
     @Override
     protected void onDraw(Canvas canvas) {
