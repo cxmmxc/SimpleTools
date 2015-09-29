@@ -24,6 +24,7 @@
         <activity android:name=".ui.ShaderActivity"/>
         <activity android:name=".ui.GirEffectActivity"/>
         <activity android:name=".ui.DreamActivity"/>
+        <activity android:name=".ui.MatrixActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->
