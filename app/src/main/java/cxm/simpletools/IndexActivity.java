@@ -10,6 +10,7 @@ import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
 import cxm.simpletools.ui.MainActivity;
 import cxm.simpletools.ui.MatrixActivity;
+import cxm.simpletools.ui.MultiCricleActivity;
 import cxm.simpletools.ui.ShaderActivity;
 import cxm.simpletools.ui.TextCusActivity;
 
@@ -65,6 +66,11 @@ public class IndexActivity extends Activity {
 
     public void MatrixClick(View view) {
         intent.setClass(this, MatrixActivity.class);
+        startActivity(intent);
+    }
+
+    public void MultiCircleClick(View view) {
+        intent.setClass(this, MultiCricleActivity.class);
         startActivity(intent);
     }
 }

@@ -49,4 +49,10 @@
         android:text="MatrixView"
         android:onClick="MatrixClick"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="MultiCircleView"
+        android:onClick="MultiCircleClick"
+        />
 </LinearLayout>

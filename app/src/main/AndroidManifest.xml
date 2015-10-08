@@ -25,6 +25,7 @@
         <activity android:name=".ui.GirEffectActivity"/>
         <activity android:name=".ui.DreamActivity"/>
         <activity android:name=".ui.MatrixActivity"/>
+        <activity android:name=".ui.MultiCricleActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->
