@@ -55,4 +55,10 @@
         android:text="MultiCircleView"
         android:onClick="MultiCircleClick"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="WaterView"
+        android:onClick="WaterClick"
+        />
 </LinearLayout>

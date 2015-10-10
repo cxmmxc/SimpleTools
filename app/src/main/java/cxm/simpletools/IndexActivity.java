@@ -13,6 +13,7 @@ import cxm.simpletools.ui.MatrixActivity;
 import cxm.simpletools.ui.MultiCricleActivity;
 import cxm.simpletools.ui.ShaderActivity;
 import cxm.simpletools.ui.TextCusActivity;
+import cxm.simpletools.ui.WaterActivity;
 
 /**
  * Created by Terry.Chen on 2015/9/24 14:38.
@@ -71,6 +72,11 @@ public class IndexActivity extends Activity {
 
     public void MultiCircleClick(View view) {
         intent.setClass(this, MultiCricleActivity.class);
+        startActivity(intent);
+    }
+
+    public void WaterClick(View view) {
+        intent.setClass(this, WaterActivity.class);
         startActivity(intent);
     }
 }
