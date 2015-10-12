@@ -8,6 +8,7 @@ import android.view.View;
 import cxm.simpletools.ui.DreamActivity;
 import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
+import cxm.simpletools.ui.LayerViewActivity;
 import cxm.simpletools.ui.MainActivity;
 import cxm.simpletools.ui.MatrixActivity;
 import cxm.simpletools.ui.MultiCricleActivity;
@@ -77,6 +78,11 @@ public class IndexActivity extends Activity {
 
     public void WaterClick(View view) {
         intent.setClass(this, WaterActivity.class);
+        startActivity(intent);
+    }
+
+    public void LayerClick(View view) {
+        intent.setClass(this, LayerViewActivity.class);
         startActivity(intent);
     }
 }

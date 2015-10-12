@@ -27,6 +27,7 @@
         <activity android:name=".ui.MatrixActivity"/>
         <activity android:name=".ui.MultiCricleActivity"/>
         <activity android:name=".ui.WaterActivity"/>
+        <activity android:name=".ui.LayerViewActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->
