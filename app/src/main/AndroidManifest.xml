@@ -28,6 +28,7 @@
         <activity android:name=".ui.MultiCricleActivity"/>
         <activity android:name=".ui.WaterActivity"/>
         <activity android:name=".ui.LayerViewActivity"/>
+        <activity android:name=".ui.PageTurnActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->

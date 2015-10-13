@@ -12,6 +12,7 @@ import cxm.simpletools.ui.LayerViewActivity;
 import cxm.simpletools.ui.MainActivity;
 import cxm.simpletools.ui.MatrixActivity;
 import cxm.simpletools.ui.MultiCricleActivity;
+import cxm.simpletools.ui.PageTurnActivity;
 import cxm.simpletools.ui.ShaderActivity;
 import cxm.simpletools.ui.TextCusActivity;
 import cxm.simpletools.ui.WaterActivity;
@@ -83,6 +84,10 @@ public class IndexActivity extends Activity {
 
     public void LayerClick(View view) {
         intent.setClass(this, LayerViewActivity.class);
+        startActivity(intent);
+    }
+    public void PageTurnClick(View view) {
+        intent.setClass(this, PageTurnActivity.class);
         startActivity(intent);
     }
 }
