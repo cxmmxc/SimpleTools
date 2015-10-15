@@ -73,4 +73,10 @@
         android:text="PageTurnView"
         android:onClick="PageTurnClick"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="FoldView"
+        android:onClick="FoldClick"
+        />
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import cxm.simpletools.ui.DreamActivity;
+import cxm.simpletools.ui.FolderActivity;
 import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
 import cxm.simpletools.ui.LayerViewActivity;
@@ -88,6 +89,10 @@ public class IndexActivity extends Activity {
     }
     public void PageTurnClick(View view) {
         intent.setClass(this, PageTurnActivity.class);
+        startActivity(intent);
+    }
+    public void FoldClick(View view) {
+        intent.setClass(this, FolderActivity.class);
         startActivity(intent);
     }
 }

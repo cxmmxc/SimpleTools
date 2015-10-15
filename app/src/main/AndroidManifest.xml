@@ -29,6 +29,7 @@
         <activity android:name=".ui.WaterActivity"/>
         <activity android:name=".ui.LayerViewActivity"/>
         <activity android:name=".ui.PageTurnActivity"/>
+        <activity android:name=".ui.FolderActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->
