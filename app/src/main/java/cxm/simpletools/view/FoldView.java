@@ -27,6 +27,8 @@ public class FoldView extends View {
     private static final float VALUE_ADDED = 1 / 500F;// 精度附加值占比  
     private static final float BUFF_AREA = 1 / 50F;// 底部缓冲区域占比
     private final static float TEXTSIZE_NORMAL = 1 / 40F, TEXTSIZE_LARGE = 1 / 20F;
+    private static final float AUTO_AREA_BUTTOM_RIGHT = 3 / 4F, AUTO_AREA_BUTTOM_LEFT = 1 / 8F;// 右下角和左侧自滑区域占比  
+    
     private Context context;
     private float textSize_normal, textSize_large;
     private static final float AUTO_SLIDE_BL_V = 1 / 25F, AUTO_SLIDE_BR_V = 1 / 100F;// 滑动速度占比  
@@ -82,13 +84,12 @@ public class FoldView extends View {
     private enum Ratio {
         LONG, SHORT
     }
-    
+
     private void initData() {
         mPath = new Path();
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeWidth(5);
-        mPaint.setColor(Color.BLACK);
+        mPaint.setStrokeWidth(2);
 
         mFoldAndNextPath = new Path();
 
@@ -97,7 +98,7 @@ public class FoldView extends View {
         mSlideHander = new SlideHandler();
         textPaint = new TextPaint(TextPaint.ANTI_ALIAS_FLAG | TextPaint.DITHER_FLAG | TextPaint.LINEAR_TEXT_FLAG);
         textPaint.setTextAlign(Paint.Align.CENTER);
-//        setLayerType(LAYER_TYPE_SOFTWARE, null);
+        setLayerType(LAYER_TYPE_SOFTWARE, null);
 
     }
 
@@ -231,14 +232,14 @@ public class FoldView extends View {
             start = 0;
             end = 1;
         }
-        for (int i = start; i < end; i++) {
-            canvas.save();
-            if (!isLastPage && i == end - 1) {
-                canvas.clipRect(0, 0, mClipX, height);
-            }
-            canvas.drawBitmap(mBitmaps.get(i), 0, 0, null);
-            canvas.restore();
-        }
+//        for (int i = start; i < end; i++) {
+//            canvas.save();
+//            if (!isLastPage && i == end - 1) {
+//                canvas.clipRect(0, 0, mClipX, height);
+//            }
+//            canvas.drawBitmap(mBitmaps.get(i), 0, 0, null);
+//            canvas.restore();
+//        }
 
         //定义区域
         Region foldRegion = null;
@@ -294,19 +295,14 @@ public class FoldView extends View {
 
         textSize_normal = height * TEXTSIZE_NORMAL;
         textSize_large = height * TEXTSIZE_LARGE;
+        
         mValueAdded = VALUE_ADDED * height;
         mBuffArea = BUFF_AREA * height;
         
-        mAutoBottom = 4 / 5F * height;
-        mAutoRight = 4 / 5F * width;
-        mAutoLeft = 1 / 5F * width;
+        mAutoBottom = AUTO_AREA_BUTTOM_RIGHT * height;
+        mAutoRight = AUTO_AREA_BUTTOM_RIGHT * width;
+        mAutoLeft = AUTO_AREA_BUTTOM_LEFT * width;
 
-
-        mAutoLeft = 1 / 5F * width;
-        mAutoRight = 4 / 5F * width;
-        mValidDis = 1 / 100F * width;
-        
-        mCurrentRegion = new Region(0, 0, width, height);
         computeShotSizeRegion();
         
         /* 
@@ -314,6 +310,7 @@ public class FoldView extends View {
          */
         mAutoSlideV_BL = width * AUTO_SLIDE_BL_V;
         mAutoSlideV_BR = width * AUTO_SLIDE_BR_V;
+        mCurrentRegion.set(0, 0, width, height);
     }
 
     private void initBitmaps() {
@@ -352,6 +349,7 @@ public class FoldView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        isNextPage = true;
         float x = event.getX();
         float y = event.getY();
         switch (event.getAction() & MotionEvent.ACTION_MASK) {
@@ -368,24 +366,37 @@ public class FoldView extends View {
                     pointY = y;
                     invalidate();
                 }
+                downAndMove(event);
                 break;
             case MotionEvent.ACTION_MOVE:
-                invalidate();
+                downAndMove(event);
                 break;
 
             case MotionEvent.ACTION_UP:
+                if (isNextPage) {
+                    if (x > mAutoRight && y > mAutoBottom) {
+                        mSlide = Slide.SLIDE_RIGHT_BOTTOM;
+                        justSlide(x, y);
+                    }
+                    if (x < mAutoLeft) {
+                        mSlide = Slide.SLIDE_LEFT_BOTTOM;
+                        justSlide(x, y);
+                    }
+                }
 
-                if (x > mAutoRight && y > mAutoBottom) {
-                    mSlide = Slide.SLIDE_RIGHT_BOTTOM;
-                    justSlide(x, y);
-                }
-                if (x < mAutoLeft) {
-                    mSlide = Slide.SLIDE_LEFT_BOTTOM;
-                    justSlide(x, y);
-                }
+
                 break;
         }
         return true;
+    }
+
+    private void downAndMove(MotionEvent event) {
+        if (!isLastPage) {
+            pointX = event.getX();
+            pointY = event.getY();
+            invalidate();
+        }
+
     }
 
     private void justSlide(float x, float y) {
@@ -406,11 +417,11 @@ public class FoldView extends View {
             pageIndex++;
             invalidate();
         } else if (mSlide == Slide.SLIDE_RIGHT_BOTTOM && pointX < width) {
-            pointX += 20;
+            pointX += mAutoSlideV_BR;
             pointY = mStart_BR_Y + ((pointX - mStart_BR_X) * (height - mStart_BR_Y)) / (width - mStart_BR_X);
             mSlideHander.sleep(25);
         } else if (mSlide == Slide.SLIDE_LEFT_BOTTOM && pointX > -width) {
-            pointX -= 30;
+            pointX -= mAutoSlideV_BL;
             // 并根据x坐标的值重新计算y坐标的值  
             pointY = mStart_BR_Y + ((pointX - mStart_BR_X) * (height - mStart_BR_Y)) / (-width - mStart_BR_X);
             mSlideHander.sleep(25);
@@ -436,5 +447,18 @@ public class FoldView extends View {
 
     private enum Slide {
         SLIDE_LEFT_BOTTOM, SLIDE_RIGHT_BOTTOM;
+    }
+
+
+    public synchronized void setBitmaps(ArrayList<Bitmap> bitmaps) {
+        if (bitmaps == null || bitmaps.isEmpty()) {
+            throw new IllegalArgumentException("bitmaps is must not be null");
+        }
+
+        if (bitmaps.size() < 2) {
+            throw new RuntimeException("fuck so little bitmap");
+        }
+        mBitmaps = bitmaps;
+        invalidate();
     }
 }
