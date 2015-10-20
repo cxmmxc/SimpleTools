@@ -30,6 +30,7 @@
         <activity android:name=".ui.LayerViewActivity"/>
         <activity android:name=".ui.PageTurnActivity"/>
         <activity android:name=".ui.FolderActivity"/>
+        <activity android:name=".ui.TestCanvasActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->
