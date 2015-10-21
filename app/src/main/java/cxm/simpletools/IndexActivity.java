@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import cxm.simpletools.ui.DragActivity;
 import cxm.simpletools.ui.DreamActivity;
 import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
@@ -66,12 +65,6 @@ public class IndexActivity extends Activity {
 
     public void MatrixClick(View view) {
         intent.setClass(this, MatrixActivity.class);
-        startActivity(intent);
-    }
-
-
-    public void DragClick(View view) {
-        intent.setClass(this, DragActivity.class);
         startActivity(intent);
     }
 }

@@ -45,14 +45,8 @@
         />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" 
         android:text="MatrixView"
         android:onClick="MatrixClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DragView"
-        android:onClick="DragClick"
         />
 </LinearLayout>
