@@ -2,6 +2,7 @@ package cxm.simpletools.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import cxm.simpletools.R;
 
@@ -12,10 +13,17 @@ import cxm.simpletools.R;
  */
 public class AnimoTestActivity extends Activity {
 
+    private ListView mListView;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anim_layout);
+        mListView = (ListView) findViewById(R.id.listview);
+        initData();
+    }
+
+    private void initData() {
         
     }
 }
