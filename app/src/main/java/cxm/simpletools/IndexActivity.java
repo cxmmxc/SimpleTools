@@ -9,6 +9,7 @@ import cxm.simpletools.ui.DreamActivity;
 import cxm.simpletools.ui.FolderActivity;
 import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
+import cxm.simpletools.ui.IconMeasureActivity;
 import cxm.simpletools.ui.LayerViewActivity;
 import cxm.simpletools.ui.MainActivity;
 import cxm.simpletools.ui.MatrixActivity;
@@ -98,6 +99,10 @@ public class IndexActivity extends Activity {
     }
     public void TestClick(View view) {
         intent.setClass(this, TestCanvasActivity.class);
+        startActivity(intent);
+    }
+    public void IconMeasureClick(View view) {
+        intent.setClass(this, IconMeasureActivity.class);
         startActivity(intent);
     }
 }

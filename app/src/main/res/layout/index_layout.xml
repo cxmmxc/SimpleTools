@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="20dip"
         >
 
     <Button
@@ -89,6 +90,18 @@
         android:layout_height="wrap_content" 
         android:text="TestCanvasView"
         android:onClick="TestClick"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="IconMeasureView"
+        android:onClick="IconMeasureClick"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="AnimotionTest"
+        android:onClick="AnimoClick"
         />
     </LinearLayout>
 </ScrollView>
