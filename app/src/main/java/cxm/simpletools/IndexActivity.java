@@ -75,7 +75,6 @@ public class IndexActivity extends Activity {
         intent.setClass(this, MatrixActivity.class);
         startActivity(intent);
     }
-
     public void MultiCircleClick(View view) {
         intent.setClass(this, MultiCricleActivity.class);
         startActivity(intent);
@@ -107,10 +106,6 @@ public class IndexActivity extends Activity {
         startActivity(intent);
     }
 
-    public void AnimoClick(View view) {
-        intent.setClass(this, AnimoTestActivity.class);
-        startActivity(intent);
-    }
     public void AnimoClick(View view) {
         intent.setClass(this, AnimoTestActivity.class);
         startActivity(intent);
