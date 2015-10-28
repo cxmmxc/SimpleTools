@@ -5,13 +5,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import cxm.simpletools.ui.AnimoTestActivity;
 import cxm.simpletools.ui.DreamActivity;
+import cxm.simpletools.ui.FolderActivity;
 import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
+import cxm.simpletools.ui.IconMeasureActivity;
+import cxm.simpletools.ui.LayerViewActivity;
 import cxm.simpletools.ui.MainActivity;
 import cxm.simpletools.ui.MatrixActivity;
+import cxm.simpletools.ui.MultiCricleActivity;
+import cxm.simpletools.ui.PageTurnActivity;
 import cxm.simpletools.ui.ShaderActivity;
+import cxm.simpletools.ui.TestCanvasActivity;
 import cxm.simpletools.ui.TextCusActivity;
+import cxm.simpletools.ui.WaterActivity;
 
 /**
  * Created by Terry.Chen on 2015/9/24 14:38.
@@ -65,6 +73,41 @@ public class IndexActivity extends Activity {
 
     public void MatrixClick(View view) {
         intent.setClass(this, MatrixActivity.class);
+        startActivity(intent);
+    }
+    public void MultiCircleClick(View view) {
+        intent.setClass(this, MultiCricleActivity.class);
+        startActivity(intent);
+    }
+
+    public void WaterClick(View view) {
+        intent.setClass(this, WaterActivity.class);
+        startActivity(intent);
+    }
+
+    public void LayerClick(View view) {
+        intent.setClass(this, LayerViewActivity.class);
+        startActivity(intent);
+    }
+    public void PageTurnClick(View view) {
+        intent.setClass(this, PageTurnActivity.class);
+        startActivity(intent);
+    }
+    public void FoldClick(View view) {
+        intent.setClass(this, FolderActivity.class);
+        startActivity(intent);
+    }
+    public void TestClick(View view) {
+        intent.setClass(this, TestCanvasActivity.class);
+        startActivity(intent);
+    }
+    public void IconMeasureClick(View view) {
+        intent.setClass(this, IconMeasureActivity.class);
+        startActivity(intent);
+    }
+
+    public void AnimoClick(View view) {
+        intent.setClass(this, AnimoTestActivity.class);
         startActivity(intent);
     }
 }

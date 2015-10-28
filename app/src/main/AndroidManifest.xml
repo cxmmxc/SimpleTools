@@ -25,6 +25,14 @@
         <activity android:name=".ui.GirEffectActivity"/>
         <activity android:name=".ui.DreamActivity"/>
         <activity android:name=".ui.MatrixActivity"/>
+        <activity android:name=".ui.MultiCricleActivity"/>
+        <activity android:name=".ui.WaterActivity"/>
+        <activity android:name=".ui.LayerViewActivity"/>
+        <activity android:name=".ui.PageTurnActivity"/>
+        <activity android:name=".ui.FolderActivity"/>
+        <activity android:name=".ui.TestCanvasActivity"/>
+        <activity android:name=".ui.IconMeasureActivity"/>
+        <activity android:name=".ui.AnimoTestActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->

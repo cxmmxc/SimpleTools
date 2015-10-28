@@ -24,6 +24,6 @@ public class AnimoTestActivity extends Activity {
     }
 
     private void initData() {
-        
+
     }
 }
