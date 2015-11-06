@@ -1,107 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="20dip"
-        >
+        android:padding="20dip">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="CircleView"
-        android:onClick="CircleClick"
-        />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="PotorClick"
+            android:text="PotorDufferTest" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="TextCusView"
-        android:onClick="TextCusClick"
-        />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CircleClick"
+            android:text="CircleView" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="HeartView"
-        android:onClick="HeartClick"
-        />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="TextCusClick"
+            android:text="TextCusView" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="ShaderView"
-        android:onClick="ShaderClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="GirlView"
-        android:onClick="GirlClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="DreamView"
-        android:onClick="DreamClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="MatrixView"
-        android:onClick="MatrixClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="MultiCircleView"
-        android:onClick="MultiCircleClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="WaterView"
-        android:onClick="WaterClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="LayerView"
-        android:onClick="LayerClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="PageTurnView"
-        android:onClick="PageTurnClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="FoldView"
-        android:onClick="FoldClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="TestCanvasView"
-        android:onClick="TestClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="IconMeasureView"
-        android:onClick="IconMeasureClick"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:text="AnimotionTest"
-        android:onClick="AnimoClick"
-        />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="HeartClick"
+            android:text="HeartView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ShaderClick"
+            android:text="ShaderView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GirlClick"
+            android:text="GirlView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="DreamClick"
+            android:text="DreamView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MatrixClick"
+            android:text="MatrixView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MultiCircleClick"
+            android:text="MultiCircleView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="WaterClick"
+            android:text="WaterView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="LayerClick"
+            android:text="LayerView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="PageTurnClick"
+            android:text="PageTurnView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="FoldClick"
+            android:text="FoldView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="TestClick"
+            android:text="TestCanvasView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="IconMeasureClick"
+            android:text="IconMeasureView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="AnimoClick"
+            android:text="AnimotionTest" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="QqHeadPickClick"
+            android:text="QqHeadPick" />
     </LinearLayout>
 </ScrollView>

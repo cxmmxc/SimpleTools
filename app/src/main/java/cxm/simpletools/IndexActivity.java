@@ -16,6 +16,8 @@ import cxm.simpletools.ui.MainActivity;
 import cxm.simpletools.ui.MatrixActivity;
 import cxm.simpletools.ui.MultiCricleActivity;
 import cxm.simpletools.ui.PageTurnActivity;
+import cxm.simpletools.ui.PotorActivity;
+import cxm.simpletools.ui.QQHeadSelectActivity;
 import cxm.simpletools.ui.ShaderActivity;
 import cxm.simpletools.ui.TestCanvasActivity;
 import cxm.simpletools.ui.TextCusActivity;
@@ -108,6 +110,14 @@ public class IndexActivity extends Activity {
     }
     public void AnimoClick(View view) {
         intent.setClass(this, AnimoTestActivity.class);
+        startActivity(intent);
+    }
+    public void QqHeadPickClick(View view) {
+        intent.setClass(this, QQHeadSelectActivity.class);
+        startActivity(intent);
+    }
+    public void PotorClick(View view) {
+        intent.setClass(this, PotorActivity.class);
         startActivity(intent);
     }
 }
