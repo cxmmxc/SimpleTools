@@ -145,6 +145,7 @@ public class AnimoTestActivity extends Activity {
             convertView = inflater.inflate(R.layout.anim_item, null);
             final Button click_btn = (Button) convertView.findViewById(R.id.click_btn);
 
+            final View finalConvertView = convertView;
             click_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
