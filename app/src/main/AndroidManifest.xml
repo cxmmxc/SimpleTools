@@ -34,7 +34,7 @@
         <activity android:name=".ui.IconMeasureActivity"/>
         <activity android:name=".ui.AnimoTestActivity"/>
         <activity android:name=".ui.QQHeadSelectActivity"/>
-        <activity android:name=".ui.PotorActivity"/>
+        <activity android:name=".ui.EditBitmapActivity"/>
 
         <!--<meta-data-->
             <!--android:name="UMENG_CHANNEL"-->

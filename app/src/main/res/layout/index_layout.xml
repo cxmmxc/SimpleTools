@@ -10,6 +10,13 @@
         android:padding="20dip"
         >
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EditBitmapView"
+            android:onClick="EditBitmapClick"
+            />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 

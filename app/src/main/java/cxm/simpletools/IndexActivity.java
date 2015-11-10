@@ -7,6 +7,7 @@ import android.view.View;
 
 import cxm.simpletools.ui.AnimoTestActivity;
 import cxm.simpletools.ui.DreamActivity;
+import cxm.simpletools.ui.EditBitmapActivity;
 import cxm.simpletools.ui.FolderActivity;
 import cxm.simpletools.ui.GirEffectActivity;
 import cxm.simpletools.ui.HearActivity;
@@ -118,6 +119,11 @@ public class IndexActivity extends Activity {
     }
     public void PotorClick(View view) {
         intent.setClass(this, PotorActivity.class);
+        startActivity(intent);
+    }
+
+    public void EditBitmapClick(View view) {
+        intent.setClass(this, EditBitmapActivity.class);
         startActivity(intent);
     }
 }
