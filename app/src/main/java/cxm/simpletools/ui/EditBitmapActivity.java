@@ -1,10 +1,8 @@
 package cxm.simpletools.ui;
 
 import android.app.Activity;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
-import cxm.simpletools.R;
 import cxm.simpletools.view.EditView;
 
 /**
@@ -16,6 +14,6 @@ public class EditBitmapActivity extends Activity {
         super.onCreate(savedInstanceState);
         EditView view = new EditView(this, null);
         setContentView(view);
-        view.setBitmap(BitmapFactory.decodeResource(getResources(), R.mipmap.t6));
+//        view.setBitmap(BitmapFactory.decodeResource(getResources(), R.mipmap.t6));
     }
 }
